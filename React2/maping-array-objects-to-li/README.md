@@ -1,5 +1,5 @@
 ---
-tutorial: 'https://www.youtube.com/watch?v=Gw6i3BWzwNY'
+tutorial: "https://www.youtube.com/watch?v=Gw6i3BWzwNY"
 ---
 
 # `02.1` Mapping array objects to `<li>`
@@ -8,10 +8,10 @@ with the knowledge you have learned, now let's render a list of `<li>`'s using `
 
 ```js
 const animals = [
-  { label: 'Horse' },
-  { label: 'Turtle' },
-  { label: 'Elephant' },
-  { label: 'Monkey' },
+  { label: "Horse" },
+  { label: "Turtle" },
+  { label: "Elephant" },
+  { label: "Monkey" },
 ];
 ```
 

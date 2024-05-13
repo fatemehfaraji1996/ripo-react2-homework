@@ -5,6 +5,7 @@ import './App.css'
 import Called from './components/Called'
 import Alert from './components/Alert'
 import Building from './components/Building'
+import RenderList from './components/RenderList'
 function App() {
   const data = {
     image: '../../.learn/assets/Dylan.png?raw=true',
@@ -16,9 +17,24 @@ function App() {
       label: 'Go to wikipedia',
     },
   }
-
-  return (<><Called/><Alert text ="OMG! Something really bad has happened!"/><Building cardDescription={data.cardDescription}image={data.image}cardTitle={data.cardTitle}url=
-  {data.button.url}lable={data.button.label}/></>)
+  const animals = [
+    { label: "Horse" },
+    { label: "Turtle" },
+    { label: "Elephant" },
+    { label: "Monkey" },
+  ];
+  return (
+  <>
+  <Called/>
+  <Alert text ="OMG! Something really bad has happened!"/>
+  <Building cardDescription={data.cardDescription}
+  image={data.image}
+  cardTitle={data.cardTitle}
+  url={data.button.url}
+  lable={data.button.label}/>
+  <RenderList animals={animals}/>
+  
+  </>)
 }
 
 export default App
