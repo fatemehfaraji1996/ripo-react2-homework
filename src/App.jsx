@@ -2,34 +2,23 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
+import Called from './components/Called'
+import Alert from './components/Alert'
+import Building from './components/Building'
 function App() {
-  const [count, setCount] = useState(0)
+  const data = {
+    image: '../../.learn/assets/Dylan.png?raw=true',
+    cardTitle: 'Bob Dylan',
+    cardDescription:
+      'Bob Dylan (born Robert Allen Zimmerman, May 24, 1941) is an American singer/songwriter, author, and artist who has been an influential figure in popular music and culture for more than five decades.',
+    button: {
+      url: 'https://en.wikipedia.org/wiki/Bob_Dylan',
+      label: 'Go to wikipedia',
+    },
+  }
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  return (<><Called/><Alert text ="OMG! Something really bad has happened!"/><Building cardDescription={data.cardDescription}image={data.image}cardTitle={data.cardTitle}url=
+  {data.button.url}lable={data.button.label}/></>)
 }
 
 export default App
