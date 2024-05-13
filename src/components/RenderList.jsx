@@ -6,7 +6,6 @@ function RenderList({animals}) {
              return <li key={index}>{x.lable}</li>
             })}
         </ul>
-        
         </>
     )
 }

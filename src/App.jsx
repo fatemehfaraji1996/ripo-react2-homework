@@ -6,6 +6,7 @@ import Called from './components/Called'
 import Alert from './components/Alert'
 import Building from './components/Building'
 import RenderList from './components/RenderList'
+import ShowPlanets from './components/ShowPlanets'
 function App() {
   const data = {
     image: '../../.learn/assets/Dylan.png?raw=true',
@@ -23,6 +24,7 @@ function App() {
     { label: "Elephant" },
     { label: "Monkey" },
   ];
+  const planets = ['Mars', 'Venus', 'Jupiter', 'Earth', 'Saturn', 'Neptune'];
   return (
   <>
   <Called/>
@@ -33,7 +35,7 @@ function App() {
   url={data.button.url}
   lable={data.button.label}/>
   <RenderList animals={animals}/>
-  
+  <ShowPlanets planets={planets}/>
   </>)
 }
 
