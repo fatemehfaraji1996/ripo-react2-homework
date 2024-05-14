@@ -7,6 +7,9 @@ import Alert from './components/Alert'
 import Building from './components/Building'
 import RenderList from './components/RenderList'
 import ShowPlanets from './components/ShowPlanets'
+import Pokedex from './components/Pokedex'
+
+
 function App() {
   const data = {
     image: '../../.learn/assets/Dylan.png?raw=true',
@@ -76,7 +79,7 @@ function App() {
   lable={data.button.label}/>
   <RenderList animals={animals}/>
   <ShowPlanets planets={planets}/>
-
+ <Pokedex/>
   </>)
 }
 
