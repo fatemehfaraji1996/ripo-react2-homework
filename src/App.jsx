@@ -8,7 +8,7 @@ import Building from './components/Building'
 import RenderList from './components/RenderList'
 import ShowPlanets from './components/ShowPlanets'
 import Pokedex from './components/Pokedex'
-
+import CustomerInformation from './components/CustomerInformation'
 
 function App() {
   const data = {
@@ -68,6 +68,10 @@ function App() {
         'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png',
     },
   ];
+  const customer = {
+    first_name: 'Bob',
+    last_name: 'Dylan',
+  };
   return (
   <>
   <Called/>
@@ -80,6 +84,8 @@ function App() {
   <RenderList animals={animals}/>
   <ShowPlanets planets={planets}/>
  <Pokedex/>
+ <CancelAnimationFrame first_name={customer.first_name} 
+ last_name={customer.last_name}/>
   </>)
 }
 
